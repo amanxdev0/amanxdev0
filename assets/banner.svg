@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Aman Singh">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#030712"/>
+      <stop offset="0.6" stop-color="#0a1628"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="glowCore" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#0ea5e9" stop-opacity="0.35"/>
+      <stop offset="0.6" stop-color="#0ea5e9" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#0ea5e9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="0.5" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.0"/>
+      <stop offset="0.5" stop-color="#22d3ee" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0.0"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="neon" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="420" fill="url(#bg)"/>
+  <rect width="1200" height="420" fill="url(#glowCore)"/>
+
+  <!-- aurora sweep -->
+  <rect x="-400" y="60" width="500" height="90" fill="url(#aurora)" filter="url(#soft)" opacity="0.6">
+    <animateTransform attributeName="transform" type="translate" from="-500 0" to="1700 0" dur="14s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- twinkling stars -->
+  <g fill="#bae6fd">
+    <circle cx="90" cy="70" r="2"><animate attributeName="opacity" values="0.15;1;0.15" dur="3.2s" repeatCount="indefinite"/></circle>
+    <circle cx="230" cy="140" r="1.5"><animate attributeName="opacity" values="1;0.2;1" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="370" cy="60" r="2"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="4.1s" repeatCount="indefinite"/></circle>
+    <circle cx="520" cy="110" r="1.5"><animate attributeName="opacity" values="0.9;0.15;0.9" dur="2.9s" repeatCount="indefinite"/></circle>
+    <circle cx="680" cy="55" r="2"><animate attributeName="opacity" values="0.15;1;0.15" dur="3.7s" repeatCount="indefinite"/></circle>
+    <circle cx="830" cy="130" r="1.5"><animate attributeName="opacity" values="1;0.2;1" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="970" cy="70" r="2"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="3.5s" repeatCount="indefinite"/></circle>
+    <circle cx="1100" cy="150" r="1.5"><animate attributeName="opacity" values="0.9;0.15;0.9" dur="2.7s" repeatCount="indefinite"/></circle>
+    <circle cx="150" cy="250" r="1.5"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.9s" repeatCount="indefinite"/></circle>
+    <circle cx="1050" cy="260" r="1.5"><animate attributeName="opacity" values="1;0.25;1" dur="3.1s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- perspective grid floor -->
+  <g stroke="#0ea5e9" stroke-opacity="0.18" stroke-width="1">
+    <line x1="0" y1="330" x2="1200" y2="330"/>
+    <line x1="0" y1="352" x2="1200" y2="352"/>
+    <line x1="0" y1="378" x2="1200" y2="378"/>
+    <line x1="0" y1="408" x2="1200" y2="408"/>
+    <line x1="600" y1="330" x2="600" y2="420"/>
+    <line x1="600" y1="330" x2="180" y2="420"/>
+    <line x1="600" y1="330" x2="1020" y2="420"/>
+    <line x1="600" y1="330" x2="-260" y2="420"/>
+    <line x1="600" y1="330" x2="1460" y2="420"/>
+  </g>
+
+  <!-- floating 3D cubes -->
+  <g>
+    <g opacity="0.9">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -18; 0 0" dur="6s" repeatCount="indefinite"/>
+      <polygon points="120,120 160,100 200,120 200,164 160,184 120,164" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
+      <polygon points="160,100 200,120 200,164 160,144" fill="#0ea5e9" opacity="0.25"/>
+      <polygon points="120,120 160,100 160,144 120,164" fill="#38bdf8" opacity="0.12"/>
+    </g>
+    <g opacity="0.75">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 22; 0 0" dur="7.5s" repeatCount="indefinite"/>
+      <polygon points="1000,140 1032,122 1064,140 1064,176 1032,194 1000,176" fill="none" stroke="#a78bfa" stroke-width="2.5"/>
+      <polygon points="1032,122 1064,140 1064,176 1032,158" fill="#a78bfa" opacity="0.25"/>
+      <polygon points="1000,140 1032,122 1032,158 1000,176" fill="#c4b5fd" opacity="0.12"/>
+    </g>
+    <g opacity="0.6">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -12; 0 0" dur="5.2s" repeatCount="indefinite"/>
+      <polygon points="880,80 906,66 932,80 932,108 906,122 880,108" fill="none" stroke="#22d3ee" stroke-width="2"/>
+      <polygon points="906,66 932,80 932,108 906,94" fill="#22d3ee" opacity="0.22"/>
+    </g>
+    <g opacity="0.6">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 14; 0 0" dur="6.8s" repeatCount="indefinite"/>
+      <polygon points="270,220 292,208 314,220 314,244 292,256 270,244" fill="none" stroke="#38bdf8" stroke-width="2"/>
+      <polygon points="292,208 314,220 314,244 292,232" fill="#0ea5e9" opacity="0.22"/>
+    </g>
+  </g>
+
+  <!-- name -->
+  <g filter="url(#neon)">
+    <text x="600" y="215" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="104" font-weight="800" letter-spacing="10" fill="url(#textGrad)">AMAN SINGH</text>
+  </g>
+  <text x="600" y="215" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="104" font-weight="800" letter-spacing="10" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="0;0.12;0" dur="4.5s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- divider -->
+  <line x1="380" y1="252" x2="820" y2="252" stroke="url(#textGrad)" stroke-width="2" opacity="0.7"/>
+
+  <!-- subtitle -->
+  <text x="600" y="292" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="500" letter-spacing="4" fill="#7dd3fc">CHARGEBACK &amp; FRAUD ANALYST &#183; AI AUTOMATION BUILDER</text>
+  <text x="600" y="330" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" letter-spacing="3" fill="#64748b">NEW DELHI, INDIA &#183; TEACHING AI TO DO THE BORING STUFF</text>
+</svg>
